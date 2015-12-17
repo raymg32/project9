@@ -1,0 +1,17 @@
+class Boat{
+  float x,y,dx,dy,speed;
+  
+  Boat ( float tempX, float tempY, float tempDX, float tempDY,float tempSpeed){
+    x = tempX;
+    y = tempY;
+    dx = tempDX;
+    dy = tempDY;
+    speed = tempSpeed;
+  }
+
+  void display(){
+  }
+
+  void move(){
+  }
+}
