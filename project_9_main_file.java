@@ -10,7 +10,7 @@ Squid mySquid1;
 Squid mySquid2;
 Squid mySquid3;
 
-Boat myBoat1;
+Boat [] boat = new Boat[5];
 
 //setup the screen
 void setup(){
@@ -22,7 +22,10 @@ void setup(){
   mySquid3 = new Squid( 60, 232, 52, width / 4, height, 1.5); 
   
   
-  myBoat1 = new Boat ( 50, 50, 2);
+  //array of boats
+  for(int i = 0; i < boat.length; i++){
+  boat[i] = new Boat( width - 70, horizon - 50, 2);
+  }
 }
 
 //void reset(){
@@ -37,9 +40,10 @@ void draw(){
   mySquid3.display();
   mySquid3.move();
   
-  
-  myBoat1.display();
-  myBoat1.move();
+  for(int i = 0; i < boat.length; i++){
+  boat[i].display();
+  boat[i].move();
+  }
 }
 
 void scene(){
