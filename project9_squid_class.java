@@ -1,7 +1,7 @@
 class Squid {
   float r, g, b;
-  float xpos;
-  float ypos;
+ private float xpos;
+ private float ypos;
   float speed;
   
   Squid( float tempR, float tempG, float tempB, float tempXpos, float tempYpos, float tempspeed){
@@ -21,12 +21,13 @@ class Squid {
   }
 
 void move(){
-    ypos += speed;
-    
-    if (ypos > height && ypos < horizon){
-      ypos -= speed;
+  ypos -= speed;
+  if(ypos == horizon){
+    speed = speed * -1;
     }
+    else if( ypos == height){
+     speed = speed * -1;
+    } 
+  
   }
-
 }
-
